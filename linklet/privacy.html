@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101114">
+  <meta name="description" content="How Linklet collects, uses, shares, and retains information.">
+  <title>Privacy Policy | Linklet</title>
+  <link rel="icon" href="mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Linklet policies home"><img src="mark.svg" width="28" height="28" alt=""><span>linklet</span><span class="brand-divider"></span><span class="brand-label">POLICIES</span></a>
+    <nav class="top-nav" aria-label="Policy pages"><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a></nav>
+  </header>
+  <main class="legal-wrap">
+    <aside class="legal-aside">
+      <a class="back-link" href="index.html"><span aria-hidden="true">←</span> All policies</a>
+      <p class="aside-label">ON THIS PAGE</p>
+      <nav class="toc" aria-label="Contents">
+        <a href="#overview">Overview</a><a href="#information">Information handled</a><a href="#use">How information is used</a><a href="#sharing">When information is shared</a><a href="#retention">Retention</a><a href="#security">Security</a><a href="#choices">Your choices</a><a href="#children">Age requirements</a><a href="#international">International use</a><a href="#changes">Changes and contact</a>
+      </nav>
+      <a class="other-policy" href="terms.html"><span>Also read</span>Terms of Service <span aria-hidden="true">↗</span></a>
+    </aside>
+    <article class="legal-content">
+      <div class="doc-kicker">LINKLET / PRIVACY</div>
+      <h1 class="doc-title">Privacy Policy</h1>
+      <div class="doc-meta"><span>Last updated November 8, 2026</span><span>Applies to the Linklet bot, API, and this policy site</span></div>
+      <p class="summary-box">Linklet uses information to run its Discord bot and link generation API. This page explains what the service receives, where files may be sent, and how long temporary job information is kept.</p>
+
+      <h2 id="overview">1. Overview</h2>
+      <p>Linklet is a Discord bot and optional API for generating hosted links from files or other inputs you submit. Some features publish content through third-party hosting providers. Those providers handle information under their own terms and privacy policies.</p>
+      <p>This policy covers the Linklet bot, its API, and this static policy site. It does not cover Discord, hosting providers, or other websites you visit through a generated link.</p>
+
+      <h2 id="information">2. Information Linklet handles</h2>
+      <p>The exact information depends on which command or API feature you use. It can include:</p>
+      <ul>
+        <li><strong>Discord details:</strong> your Discord user ID, username, server and channel IDs, command choices, and information needed to reply to you or apply usage limits and access levels.</li>
+        <li><strong>Files and generation details:</strong> file bytes, file name, file type, requested provider, requested quantity, and the links or error messages produced by a request.</li>
+        <li><strong>API details:</strong> the API key sent in an authorization header, the request body, a generated job ID, job status, timestamps, and results. The key is checked to authorize a request. Do not put an API key in a URL.</li>
+        <li><strong>Server settings:</strong> server IDs, selected channels, and related settings when a server administrator configures Linklet features.</li>
+        <li><strong>Operational records:</strong> error details and diagnostic information needed to keep the service working. The bot's hosting provider may also receive connection and request data, such as an IP address, time, requested path, and response status, in its service logs.</li>
+      </ul>
+      <p>The policy site does not use advertising trackers or analytics scripts. GitHub Pages hosts this site and says it logs visitor IP addresses for security purposes. See <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages" target="_blank" rel="noreferrer">GitHub's Pages documentation</a> and <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noreferrer">GitHub's Privacy Statement</a>.</p>
+
+      <h2 id="use">3. How information is used</h2>
+      <p>Linklet uses information to receive and process your request, deliver a response or generated link, check API access, apply usage limits, operate server settings, prevent abuse, troubleshoot errors, and maintain the security and reliability of the bot and API.</p>
+      <p>Linklet does not use submitted files to build advertising profiles. The service does not sell personal information.</p>
+
+      <h2 id="sharing">4. When information is shared</h2>
+      <p>Information is shared only as needed to provide the feature you choose, keep the service running, or comply with a legal obligation. Depending on the feature, this can involve:</p>
+      <ul>
+        <li><strong>Discord</strong>, which delivers commands, attachments, and replies. Discord's own <a href="https://discord.com/privacy" target="_blank" rel="noreferrer">Privacy Policy</a> applies to its services.</li>
+        <li><strong>Render</strong>, which hosts the bot and API and may process operational logs.</li>
+        <li><strong>GitHub, Cloudflare, Surge, Google Apps Script or Google Drive, Padlet, Uploadcare, and ImageKit</strong>, when one of those providers is selected to publish a file or create a link.</li>
+        <li><strong>Reverse-IP or filter-check providers</strong>, when you use a feature that makes those lookups. The lookup input needed for the request is sent to that provider.</li>
+      </ul>
+      <p>For file-hosting features, the file and related metadata are sent to the provider selected for that request. A generated URL may be accessible to anyone who has it, and the provider may retain or serve the file under its own rules. Review the provider's terms before uploading sensitive material.</p>
+      <p>Linklet may also disclose information if reasonably needed to respond to a valid legal request, protect the service or another person's safety, investigate abuse, or enforce the Terms of Service.</p>
+
+      <h2 id="retention">5. Retention</h2>
+      <p>Temporary API job records are held in memory. Completed or failed job results are scheduled to expire after one hour. Active jobs expire after 24 hours. A process restart clears in-memory job records sooner. Files may remain in a processing queue briefly while a request is being handled.</p>
+      <p>Some Discord usage counters and server settings may be saved so daily limits and server features continue to work after a restart. Their retention depends on the feature and the bot's configuration. Contact the Linklet administrator through the server where you use the bot, or the person who issued your API access, to ask about a record associated with you.</p>
+      <p>Once Linklet sends a file to a hosting provider, that provider controls its copy and may keep it until it is deleted or removed under the provider's rules. Discord messages and attachments are also subject to Discord's retention and deletion controls. Hosting and diagnostic logs are retained according to the relevant provider's practices.</p>
+
+      <h2 id="security">6. Security</h2>
+      <p>Linklet uses access checks for the API and keeps provider credentials in server configuration rather than returning them in API responses. No online service can guarantee perfect security. Keep API keys private, use secure connections, and rotate a key if you believe it has been exposed.</p>
+
+      <h2 id="choices">7. Your choices and requests</h2>
+      <p>You can stop using Linklet, remove it from a server through Discord's controls, and ask the server administrator to remove Linklet-managed settings or access records where practical. API users can stop sending requests and ask the person who issued the key to revoke it.</p>
+      <p>Depending on where you live, privacy law may give you rights to request access, correction, deletion, or other handling of personal information. Send a request to the Linklet administrator in the Discord server where you use Linklet, or to the person who issued your API access. We may need enough information to verify the request. Some records may need to be kept for security, legal, or operational reasons.</p>
+
+      <h2 id="children">8. Age requirements</h2>
+      <p>Linklet is provided through Discord and is not intended for anyone who is below the minimum age required by Discord or the law that applies to them. Do not use Linklet if you are not old enough to use Discord where you live. See <a href="https://discord.com/terms" target="_blank" rel="noreferrer">Discord's Terms of Service</a>.</p>
+
+      <h2 id="international">9. International use</h2>
+      <p>Linklet and its providers may process information in countries different from the country where you live. Those countries may have different data protection rules. Provider policies explain their own processing and transfer practices.</p>
+
+      <h2 id="changes">10. Changes and contact</h2>
+      <p>This policy may change as Linklet features or providers change. The date at the top shows when it was last updated. Continued use after an update means the revised policy applies to future use, subject to any notice required by law.</p>
+      <p>For a privacy question or request, contact the Linklet administrator in the Discord server where you use the bot, or the person who issued your API access. See also the <a href="terms.html">Terms of Service</a>.</p>
+      <div class="legal-foot">Linklet Privacy Policy · Last updated November 8, 2026</div>
+    </article>
+  </main>
+  <footer class="site-footer"><span>Linklet</span><span>Questions? Contact the Linklet administrator in the Discord server where you use Linklet, or the person who issued your API access.</span></footer>
+</body>
+</html>
